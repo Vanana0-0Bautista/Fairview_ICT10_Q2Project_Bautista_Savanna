@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Meet the Creator</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/1200x/d6/0b/94/d60b940a8bc1d8424011adb3bc0b2349.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            font-family: 'Poppins', sans-serif;
+            color: #634a31;
+            margin: 0;
+}
+
+        .navbar {
+            background-color: #8f6d5f;
+        }
+
+        .navbar-brand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            color: #e8c5ce !important;
+        }
+
+        .content-card {
+            background-color: #fffaf4;
+            max-width: 650px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(99, 74, 49, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 45px;
+            color: #7a5c3e;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #a17c5b;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #634a31;
+            line-height: 1.8;
+        }
+
+        label {
+            font-size: 15px;
+            color: #634a31;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #c9ad91;
+            border-radius: 8px;
+            margin-top: 5px;
+            background-color: #fffaf4;
+            color: #634a31;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #a17c5b;
+            box-shadow: 0 0 5px rgba(122, 92, 62, 0.2);
+        }
+
+        button {
+            background-color: #7a5c3e;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a17c5b;
+        }
+
+        #result {
+            background-color: #f8eee4;
+            color: #826548;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            color: #a17c5b;
+            font-size: 12px;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .content-card {
+                margin: 30px 15px;
+                padding: 25px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navigation" class="navbar navbar-expand-lg" style="display: none;">
+        <div class="container-fluid">
+
+            <a class="navbar-brand text-white" href="homepage.html">
+                Home
+            </a>
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="page2.html">Element Checker</a>
+                <a class="nav-link" href="page3.html">School Club Members</a>
+                <a class="nav-link" href="page4.html">Meet the Creator</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <br><br>
+
+    <!-- Main Content -->
+    <div class="content-card">
+
+        <h1>Meet the Creator of this Project</h1>
+        <h2>Creator Verification System</h2>
+
+        <p>
+            Welcome to my website! Before exploring the different
+            activities and pages, please enter your first and last
+            name to verify the creator of this project.
+        </p>
+
+        <hr>
+
+        <form>
+
+            <label for="first_name">First Name:</label>
+            <br>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <br><br>
+
+            <label for="last_name">Last Name:</label>
+            <br>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <br>
+
+            <button type="button" py-click="submit_form">
+                Submit
+            </button>
+
+        </form>
+
+        <!-- Python Output -->
+        <div id="result">
+            Your result will be displayed here.
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Meet the Creator | My Creative Circle
+    </footer>
+
+    <!-- Python File -->
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
