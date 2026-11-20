@@ -1,6 +1,5 @@
-from pyscript import document, display
+from pyscript import document
 
-#PAGE1
 Creator = [
     "Savanna Bautista"
 ]
@@ -16,19 +15,10 @@ def submit_form(e):
 
     messages = {
         True: f"Welcome {full_name}! Welcome Creator!",
-        False: f"Sorry {full_name}, you are not the creator of this project."
+        False: f"Welcome {full_name}! Thank you for visiting my website."
     }
 
-    if is_creator:
-        document.getElementById("navigation").style.display = "block"
-
     document.getElementById("result").innerHTML = messages[is_creator]
-
-
-    creator_info = {
-    "HOBBY": ("drawing", "listening to music", "and being sporty"),
-    
-}
 
 #PAGE#2
 #Non-metals
